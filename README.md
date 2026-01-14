@@ -23,3 +23,4 @@ To use the React version, set up a React app and import the component.
 - Space-themed background with animations
 - Smooth scrolling navigation
 - Project links to GitHub repos
+- Font Awesome icons for visual enhancement
