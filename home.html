@@ -74,6 +74,24 @@ section {
     border-radius: 8px;
 }
 
+#hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
 footer {
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -99,32 +117,84 @@ footer {
     section {
         padding: 15px;
     }
+
+    #hero h2 {
+        font-size: 1.5em;
+    }
+
+    .project h3 {
+        font-size: 1.2em;
+    }
 }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to the Home Page</h1>
+        <h1>Pushkar Choudhary - Web Developer</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Back to Registration</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Register</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section id="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Passionate Computer Engineering student and aspiring Web Developer, eager to build innovative solutions.</p>
+        </section>
         <section id="about">
-            <h2>About Us</h2>
-            <p>This is the home page after successful registration. Explore our features!</p>
+            <h2>About Me</h2>
+            <p>Hello! I'm Pushkar Choudhary, a recent graduate in Computer Engineering. As a fresher, I'm enthusiastic about web development, with a focus on creating user-friendly and responsive websites. I love learning new technologies and applying them to real-world problems.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js</li>
+                <li>Python, Java</li>
+                <li>Git, GitHub</li>
+                <li>Responsive Design</li>
+                <li>Database Management (SQL, MongoDB)</li>
+            </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3><a href="https://github.com/Pushkar1306/E-plantshopping" style="color: white;">E-plantshopping</a></h3>
+                <p>An e-commerce platform for plant shopping built with JavaScript.</p>
+            </div>
+            <div class="project">
+                <h3><a href="https://github.com/Pushkar1306/Localrepo" style="color: white;">Localrepo</a></h3>
+                <p>A local repository project using CSS.</p>
+            </div>
+            <div class="project">
+                <h3><a href="https://github.com/Pushkar1306/Portfolio" style="color: white;">Portfolio</a></h3>
+                <p>A personal portfolio showcasing my projects, skills, and achievements. Built to highlight coding expertise, creative problem-solving, and continuous learning.</p>
+            </div>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Engineering in Computer Engineering</strong><br>
+            Savitribai Phule Pune University, Graduation Year: 2026<br>
+            GPA: 7.8/10</p>
+            <p><strong>High School</strong><br>
+            MIT jr College Nanded, Year: 2022<br>
+            Percentage: 83.33%</p>
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>Get in touch with us.</p>
+            <p>Email: Pushkarchoudhary362@gmail.com</p>
+            <p>Phone: +91 7588847171</p>
+            <p>GitHub: <a href="https://github.com/Pushkar1306" style="color: white;">github.com/Pushkar1306</a></p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026 My Portfolio</p>
+        <p>&copy; 2026 Pushkar Choudhary. All rights reserved.</p>
     </footer>
 </body>
 </html>
