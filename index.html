@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h2>User Registration</h2>
-        <form id="registrationForm">
+        <form id="registrationForm" action="/register" method="POST">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -31,7 +31,9 @@
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            validateForm();
+            if (validateForm()) {
+                this.submit();
+            }
         });
 
         function validateForm() {
@@ -75,9 +77,7 @@
                 phoneError.textContent = '';
             }
 
-            if (isValid) {
-                window.location.href = 'home.html';
-            }
+            return isValid;
         }
     </script>
 </body>
