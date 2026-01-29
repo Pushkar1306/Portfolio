@@ -1,6 +1,6 @@
 /* portfolio.css */
 .portfolio {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 25%, #415a77 50%, #778da9 75%, #e0e1dd 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
@@ -11,6 +11,37 @@
   overflow-x: hidden;
   min-height: 100vh;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg-1:#0d1b2a;
+  --accent:#61dafb;
+  --muted:#e0e1dd;
+  --card-bg: rgba(255,255,255,0.06);
+  --glass: rgba(255,255,255,0.06);
+  --radius:14px;
+  --glass-blur:10px;
+  --max-width:1100px;
+}
+
+/* Utility container */
+.container{ max-width:var(--max-width); margin:0 auto; padding:24px; }
+
+/* Hero CTA */
+.hero-cta{
+  display:inline-block;
+  margin-top:18px;
+  background: linear-gradient(90deg,var(--accent),#7bdff6);
+  color:#012; padding:10px 18px; border-radius:10px;
+  font-weight:600; text-decoration:none; box-shadow:0 8px 24px rgba(97,218,251,0.12);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.hero-cta:hover{ transform:translateY(-4px); box-shadow:0 18px 40px rgba(97,218,251,0.18); }
+
+/* Card */
+.card{ background:var(--card-bg); border-radius:var(--radius); padding:16px; display:block; transition:transform .22s,box-shadow .22s; }
+.card:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(2,6,23,0.5); }
 
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
