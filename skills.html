@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skills — Pushkar Choudhary</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+    .skill-list { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .skill { background: rgba(255,255,255,0.03); padding: 14px; border-radius: 8px; }
+    .skill .bar { height: 10px; background: rgba(255,255,255,0.12); border-radius: 6px; margin-top: 8px; overflow: hidden; }
+    .skill .bar > i { display: block; height:100%; background: linear-gradient(90deg,#61dafb,#9be7ff); border-radius:6px; }
+  </style>
+</head>
+<body class="portfolio">
+  <header>
+    <h1>Pushkar Choudhary - Web Developer</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="skills.html"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
+        <li><a href="education.html"><i class="fas fa-university"></i> Education</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="skills">
+      <h2><i class="fas fa-tools"></i> Skills & Tools</h2>
+      <p>Practical skills split across Frontend, Backend, Tools and Databases.</p>
+
+      <div class="skill-list">
+        <div class="skill">
+          <strong>HTML & CSS</strong>
+          <div class="bar" aria-hidden="true"><i style="width:90%"></i></div>
+          <small>Semantic HTML, responsive layouts, Grid, Flexbox, animations.</small>
+        </div>
+        <div class="skill">
+          <strong>JavaScript</strong>
+          <div class="bar" aria-hidden="true"><i style="width:82%"></i></div>
+          <small>ES6+, DOM, async, fetch, testing basics.</small>
+        </div>
+        <div class="skill">
+          <strong>React</strong>
+          <div class="bar" aria-hidden="true"><i style="width:78%"></i></div>
+          <small>Components, hooks, routing, simple state management.</small>
+        </div>
+        <div class="skill">
+          <strong>Node.js & Backend</strong>
+          <div class="bar" aria-hidden="true"><i style="width:65%"></i></div>
+          <small>Express, REST APIs, lightweight prototypes.</small>
+        </div>
+        <div class="skill">
+          <strong>Databases</strong>
+          <div class="bar" aria-hidden="true"><i style="width:60%"></i></div>
+          <small>MongoDB, basic SQL concepts.</small>
+        </div>
+        <div class="skill">
+          <strong>Tools</strong>
+          <div class="bar" aria-hidden="true"><i style="width:70%"></i></div>
+          <small>Git, GitHub, Chrome DevTools, VS Code.</small>
+        </div>
+      </div>
+
+      <h3>Certifications & Courses</h3>
+      <ul>
+        <li>Responsive Web Design — freeCodeCamp (self-study)</li>
+        <li>JavaScript Algorithms and Data Structures — online course</li>
+      </ul>
+
+      <h3>Learning Plan</h3>
+      <p>Next steps: deepen React knowledge (patterns, performance), add automated tests, and learn TypeScript.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Pushkar Choudhary. All rights reserved.</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>
