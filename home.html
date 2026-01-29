@@ -217,41 +217,7 @@ footer {
         margin: 5px 0;
     }
 }
-/* Hero illustration styles */
-.hero-illustration {
-    max-width: 900px;
-    margin: 20px auto 0;
-}
-.hero-illustration svg {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-.hero-illustration svg * {
-    vector-effect: non-scaling-stroke;
-}
-/* Doodle animations */
-.hero-illustration svg { overflow: visible; }
-.hero-illustration .walker { transform-box: fill-box; transform-origin: center bottom; }
-.hero-illustration .person { transform-box: fill-box; transform-origin: 50% 80%; animation: bob 1.8s ease-in-out infinite; }
-.hero-illustration .walker { animation: stride 6.5s linear infinite; }
-.hero-illustration .walker.person-1 { animation-duration: 6.5s; animation-delay: 0s; }
-.hero-illustration .walker.person-2 { animation-duration: 7.2s; animation-delay: 0.2s; }
-.hero-illustration .walker.person-3 { animation-duration: 6.9s; animation-delay: 0.4s; }
-.hero-illustration .walker.person-4 { animation-duration: 7.6s; animation-delay: 0.1s; }
-.hero-illustration .walker.person-5 { animation-duration: 6.2s; animation-delay: 0.3s; }
 
-@keyframes bob {
-    0%   { transform: translateY(0) rotate(0deg); }
-    50%  { transform: translateY(-6px) rotate(-1.5deg); }
-    100% { transform: translateY(0) rotate(0deg); }
-}
-
-@keyframes stride {
-    0%   { transform: translateX(-12px); }
-    50%  { transform: translateX(12px); }
-    100% { transform: translateX(-12px); }
-}
     </style>
 </head>
 <body>
@@ -269,75 +235,19 @@ footer {
         </nav>
     </header>
     <main>
-        <section id="hero">
-            <h2><i class="fas fa-rocket"></i> Welcome to My Portfolio</h2>
-            <p>Passionate Computer Engineering student and aspiring Web Developer, eager to build innovative solutions.</p>
-            <div class="hero-illustration" aria-hidden="false">
-                <!-- Doodle-style illustration of people walking on a footpath (inline SVG) -->
-                <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet" role="img" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="pathGrad" x1="0" x2="1">
-                            <stop offset="0" stop-color="#ffffff" stop-opacity="0.12" />
-                            <stop offset="1" stop-color="#61dafb" stop-opacity="0.10" />
-                        </linearGradient>
-                    </defs>
-                    <!-- footpath -->
-                    <rect x="0" y="200" width="1200" height="80" fill="url(#pathGrad)" rx="6"/>
-                    <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95">
-                        <!-- person 1 -->
-                        <g class="walker person-1">
-                            <g transform="translate(120,170) scale(0.9)" class="person">
-                                <circle cx="0" cy="-30" r="14" fill="#fff" opacity="0.95"/>
-                                <path d="M-8 -16 C -6 -6, 6 -6, 8 -16" stroke="#fff" stroke-width="2"/>
-                                <path d="M0 -16 L0 6 L-12 26"/>
-                                <path d="M0 -2 L18 24"/>
-                            </g>
-                        </g>
-                        <!-- person 2 -->
-                        <g class="walker person-2">
-                            <g transform="translate(300,170) scale(1)" class="person">
-                                <circle cx="0" cy="-30" r="14" fill="#fff" opacity="0.95"/>
-                                <path d="M-6 -14 L6 -6"/>
-                                <path d="M-6 -6 L-8 12 L0 26"/>
-                                <path d="M6 -6 L20 8"/>
-                            </g>
-                        </g>
-                        <!-- person 3 (with a bag) -->
-                        <g class="walker person-3">
-                            <g transform="translate(520,170) scale(1)" class="person">
-                                <circle cx="0" cy="-30" r="14" fill="#fff" opacity="0.95"/>
-                                <path d="M-6 -12 L6 -8"/>
-                                <path d="M-4 -8 L-6 14 L2 28"/>
-                                <path d="M6 -8 L18 6"/>
-                                <rect x="-18" y="-2" width="10" height="12" rx="2"/>
-                            </g>
-                        </g>
-                        <!-- person 4 (working with laptop on lap) -->
-                        <g class="walker person-4">
-                            <g transform="translate(740,170) scale(0.95)" class="person">
-                                <circle cx="0" cy="-30" r="14" fill="#fff" opacity="0.95"/>
-                                <path d="M-6 -12 L6 -8"/>
-                                <path d="M-8 -4 L-4 6 L8 6"/>
-                                <rect x="-10" y="0" width="20" height="12" rx="2"/>
-                            </g>
-                        </g>
-                        <!-- person 5 (gesturing) -->
-                        <g class="walker person-5">
-                            <g transform="translate(960,170) scale(0.95)" class="person">
-                                <circle cx="0" cy="-30" r="14" fill="#fff" opacity="0.95"/>
-                                <path d="M-8 -12 L6 -6"/>
-                                <path d="M0 -6 L-10 18"/>
-                                <path d="M6 -6 L22 8"/>
-                            </g>
-                        </g>
-                    </g>
-                    <!-- subtle dashed lane markings -->
-                    <g stroke="#ffffff" stroke-width="1.5" stroke-dasharray="18 18" opacity="0.08">
-                        <path d="M20 240 L1180 240"/>
-                    </g>
-                </svg>
-            </div>
-        </section>
+        <section id="hero" class="container">
+  <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+    <img src="assets/me-circle.png" alt="Pushkar photo" style="width:110px;height:110px;border-radius:999px;border:3px solid rgba(255,255,255,0.08);object-fit:cover;">
+    <div>
+      <h2 style="margin:0;font-size:2rem;">Hi, I'm Pushkar — Web Developer</h2>
+      <p style="margin:6px 0 0;color:var(--muted);max-width:680px;">I build responsive, accessible web apps. Currently focused on React and full-stack JavaScript.</p>
+      <div style="margin-top:12px;">
+        <a class="hero-cta" href="projects.html">View Projects</a>
+        <a class="hero-cta" href="assets/Pushkar_Resume.pdf" style="margin-left:10px;background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted);">Download Resume</a>
+      </div>
+    </div>
+  </div>
+</section>
         <section id="about">
             <h2><i class="fas fa-info-circle"></i> About Me</h2>
             <p>Hello! I'm Pushkar Choudhary, a recent graduate in Computer Engineering. As a fresher, I'm enthusiastic about web development, with a focus on creating user-friendly and responsive websites. I love learning new technologies and applying them to real-world problems.</p>
