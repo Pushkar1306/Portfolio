@@ -49,20 +49,23 @@ Message:
 Replace the three placeholders in `contact.html`:
 
 ### Location 1: In `<head>` section
+
 ```html
 <script>
-    emailjs.init("YOUR_PUBLIC_KEY");
+  emailjs.init("YOUR_PUBLIC_KEY");
 </script>
 ```
 
 Replace `YOUR_PUBLIC_KEY` with your actual Public Key from Step 4.
 
 ### Location 2: In form submit handler (near bottom)
+
 ```js
-emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this);
 ```
 
 Replace:
+
 - `YOUR_SERVICE_ID` → from Step 2
 - `YOUR_TEMPLATE_ID` → from Step 3
 
@@ -77,16 +80,19 @@ Replace:
 ## Troubleshooting
 
 **Form says "Failed — try again"**:
+
 - Double-check Public Key, Service ID, and Template ID
 - Ensure your email service is activated in EmailJS dashboard
 - Check browser console (F12 → Console) for error messages
 
 **Emails not arriving**:
+
 - Check spam/promotions folder
 - Verify service is connected (not showing red X in dashboard)
 - Re-authorize email service if needed
 
 **Rate limited**:
+
 - Free tier allows ~200 emails/month
 - Upgrade plan if needed
 
