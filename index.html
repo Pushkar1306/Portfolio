@@ -1,295 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pushkar Choudhary — Frontend Developer. Computer Engineering graduate 2026. React, JavaScript, Node.js. Open to internships and entry-level roles.">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Pushkar Choudhary — Frontend Developer">
-    <meta property="og:description" content="Portfolio of Pushkar Choudhary, web developer skilled in React, JavaScript, Node.js and responsive design.">
-    <meta property="og:url" content="https://pushkar1306.github.io/Portfolio/">
-    <meta name="twitter:card" content="summary">
-    <title>Registration — Pushkar Choudhary</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-body {
-    font-family: Arial, sans-serif;
-    background: radial-gradient(ellipse at center, #0d1b2a 0%, #1b263b 50%, #415a77 100%);
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    position: relative;
-    padding: 20px;
-}
-
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
-                      radial-gradient(2px 2px at 40px 70px, #ffffff, transparent),
-                      radial-gradient(1px 1px at 90px 40px, #ffffff, transparent),
-                      radial-gradient(1px 1px at 130px 80px, #ffffff, transparent),
-                      radial-gradient(2px 2px at 160px 30px, #ffffff, transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    opacity: 0.8;
-    pointer-events: none;
-}
-
-.container {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-    width: 350px;
-    position: relative;
-    z-index: 1;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #0d1b2a;
-    font-size: 1.8em;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-weight: 500;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-input:focus {
-    outline: none;
-    border-color: #61dafb;
-    box-shadow: 0 0 5px rgba(97, 218, 251, 0.3);
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(90deg, #61dafb, #7bdff6);
-    color: #0d1b2a;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(97, 218, 251, 0.3);
-}
-
-.error {
-    color: #e74c3c;
-    font-size: 12px;
-    margin-top: 4px;
-    display: none;
-}
-
-.success {
-    color: #27ae60;
-    font-size: 14px;
-    text-align: center;
-    padding: 10px;
-    background: rgba(39, 174, 96, 0.1);
-    border-radius: 4px;
-    margin-bottom: 15px;
-    display: none;
-}
-
-.form-footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 13px;
-}
-
-.form-footer a {
-    color: #61dafb;
-    text-decoration: none;
-}
-
-.form-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-    }
-
-    input {
-        padding: 10px;
-    }
-
-    button {
-        padding: 12px;
-    }
-}
-
-@media (max-width: 400px) {
-    .container {
-        width: 100%;
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.3em;
-    }
-}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Pushkar Choudhary is a final-year Computer Engineering student building responsive, accessible frontend experiences with HTML, CSS, JavaScript, and React."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pushkar Choudhary | Frontend Portfolio">
+  <meta
+    property="og:description"
+    content="A polished portfolio for Pushkar Choudhary featuring projects, skills, education, and contact details."
+  >
+  <meta property="og:url" content="https://pushkar1306.github.io/Portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Pushkar Choudhary | Frontend Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="portfolio.css">
+  <script defer src="portfolio.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h2><i class="fas fa-user-plus"></i> Register</h2>
-        <div class="success" id="successMessage">Registration successful! Redirecting...</div>
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Pushkar Choudhary" required>
-                <span class="error" id="nameError">Please enter a valid name</span>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                <span class="error" id="emailError">Please enter a valid email</span>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="+91 7588847171" required>
-                <span class="error" id="phoneError">Please enter a valid phone number</span>
-            </div>
-            <button type="submit">Create Account</button>
-        </form>
-        <div class="form-footer">
-            Already have an account? <a href="home.html">Go to Portfolio</a>
-        </div>
+<body class="portfolio">
+  <header class="site-header">
+    <div class="site-shell site-header__bar">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Pushkar Choudhary</span>
+        <span class="brand__role">Frontend Developer Portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a data-nav-link href="index.html"><span>Home</span><i class="fas fa-house"></i></a></li>
+          <li><a data-nav-link href="about.html"><span>About</span><i class="fas fa-user"></i></a></li>
+          <li><a data-nav-link href="skills.html"><span>Skills</span><i class="fas fa-code"></i></a></li>
+          <li><a data-nav-link href="projects.html"><span>Projects</span><i class="fas fa-layer-group"></i></a></li>
+          <li><a data-nav-link href="education.html"><span>Education</span><i class="fas fa-graduation-cap"></i></a></li>
+          <li><a data-nav-link href="contact.html"><span>Contact</span><i class="fas fa-envelope"></i></a></li>
+          <li><a href="mailto:Pushkarchoudhary362@gmail.com?subject=Resume%20Request"><span>Resume</span><i class="fas fa-file-arrow-down"></i></a></li>
+        </ul>
+      </nav>
     </div>
-    <script>
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            validateForm();
-        });
+  </header>
 
-        function validateForm() {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            
-            let isValid = true;
-            
-            // Reset error messages
-            document.getElementById('nameError').style.display = 'none';
-            document.getElementById('emailError').style.display = 'none';
-            document.getElementById('phoneError').style.display = 'none';
+  <main class="page-main site-shell">
+    <section class="hero reveal">
+      <div class="hero__copy">
+        <span class="eyebrow"><i class="fas fa-sparkles"></i> Final-year Computer Engineering student</span>
+        <h1>Building clean, responsive web experiences that feel easy to use.</h1>
+        <p class="hero__lead">
+          I am Pushkar Choudhary, a 2026 Computer Engineering student focused on frontend development.
+          I enjoy turning ideas into polished interfaces with HTML, CSS, JavaScript, and React.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="projects.html"><i class="fas fa-arrow-right"></i> See projects</a>
+          <a class="btn btn--ghost" href="contact.html"><i class="fas fa-paper-plane"></i> Contact me</a>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card">
+            <p class="stat-card__value">2026</p>
+            <p class="stat-card__label">Graduating in Computer Engineering with a strong interest in frontend roles.</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__value">Core</p>
+            <p class="stat-card__label">HTML, CSS, JavaScript, React, responsive layouts, and interface polish.</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-card__value">Open</p>
+            <p class="stat-card__label">Available for internships, entry-level opportunities, and practical team projects.</p>
+          </article>
+        </div>
+      </div>
+      <aside class="hero__panel">
+        <article class="profile-card">
+          <div class="profile-card__top">
+            <div class="avatar" aria-hidden="true">PC</div>
+            <div>
+              <h2>Pushkar Choudhary</h2>
+              <p>Frontend-focused developer</p>
+            </div>
+          </div>
+          <ul class="profile-card__meta">
+            <li><i class="fas fa-location-dot"></i><span>Based in India and comfortable with remote collaboration.</span></li>
+            <li><i class="fas fa-code"></i><span>Focused on accessible UI, clean structure, and practical web experiences.</span></li>
+            <li><i class="fas fa-briefcase"></i><span>Looking for opportunities where I can learn fast and ship real work.</span></li>
+          </ul>
+        </article>
+        <article class="list-card">
+          <span class="kicker">Current focus</span>
+          <h3>What I want this portfolio to say</h3>
+          <ul class="bullet-list">
+            <li>I can design a usable frontend, not just assemble sections.</li>
+            <li>I care about responsiveness, hierarchy, and clarity.</li>
+            <li>I am ready to keep improving with real feedback and team work.</li>
+          </ul>
+        </article>
+      </aside>
+    </section>
 
-            // Validate name
-            if (name.length < 3) {
-                document.getElementById('nameError').style.display = 'block';
-                isValid = false;
-            }
+    <section class="section-card reveal">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Selected work</span>
+          <h2 class="section-title">Projects that show how I build</h2>
+        </div>
+        <a class="text-link" href="projects.html">View all projects</a>
+      </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="project-card__top">
+            <div>
+              <h3>E-plantshopping</h3>
+              <p class="meta">Frontend project</p>
+            </div>
+            <span class="timeline-card__badge">JavaScript</span>
+          </div>
+          <p>
+            A plant shopping interface centered on product browsing, layout clarity, and smooth user flow.
+            It highlights my frontend fundamentals and interest in e-commerce UI patterns.
+          </p>
+          <div class="tag-row">
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsive UI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Pushkar1306/E-plantshopping" target="_blank" rel="noreferrer">GitHub source</a>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-card__top">
+            <div>
+              <h3>Localrepo</h3>
+              <p class="meta">Layout practice repository</p>
+            </div>
+            <span class="timeline-card__badge">HTML/CSS</span>
+          </div>
+          <p>
+            A hands-on repository for experimenting with layout structure, spacing, and visual rhythm while learning
+            how Grid and Flexbox behave in real UI work.
+          </p>
+          <div class="tag-row">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Layout systems</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Pushkar1306/Localrepo" target="_blank" rel="noreferrer">GitHub source</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-            // Validate email
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                document.getElementById('emailError').style.display = 'block';
-                isValid = false;
-            }
+    <section class="cards-grid reveal">
+      <article class="section-card">
+        <span class="section-kicker">How I work</span>
+        <h2 class="section-title">My approach is practical and detail-oriented</h2>
+        <ul class="bullet-list">
+          <li>Start with structure first so the page feels easy to scan.</li>
+          <li>Use color and typography to create personality without hurting readability.</li>
+          <li>Keep layouts responsive from the start, not as a final fix.</li>
+        </ul>
+      </article>
+      <article class="section-card">
+        <span class="section-kicker">What I am learning</span>
+        <h2 class="section-title">The next step is stronger frontend depth</h2>
+        <ul class="bullet-list">
+          <li>Sharpening React patterns and component thinking.</li>
+          <li>Improving project storytelling so each build has clearer outcomes.</li>
+          <li>Exploring better testing and deployment habits for production-ready work.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
-            // Validate phone
-            const phonePattern = /^\+?[\d\s\-()]{7,}$/;
-            if (!phonePattern.test(phone)) {
-                document.getElementById('phoneError').style.display = 'block';
-                isValid = false;
-            }
-
-            if (isValid) {
-                const successMsg = document.getElementById('successMessage');
-                successMsg.style.display = 'block';
-                document.getElementById('registrationForm').style.display = 'none';
-                
-                // Redirect after 2 seconds
-                setTimeout(() => {
-                    window.location.href = 'home.html';
-                }, 2000);
-            }
-        }
-    </script>
-</body>
-</html>
-
-            // Name validation
-            const name = document.getElementById('name').value.trim();
-            const nameError = document.getElementById('nameError');
-            if (name === '') {
-                nameError.textContent = 'Name is required.';
-                isValid = false;
-            } else {
-                nameError.textContent = '';
-            }
-
-            // Email validation
-            const email = document.getElementById('email').value.trim();
-            const emailError = document.getElementById('emailError');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (email === '') {
-                emailError.textContent = 'Email is required.';
-                isValid = false;
-            } else if (!emailRegex.test(email)) {
-                emailError.textContent = 'Please enter a valid email address.';
-                isValid = false;
-            } else {
-                emailError.textContent = '';
-            }
-
-            // Phone validation
-            const phone = document.getElementById('phone').value.trim();
-            const phoneError = document.getElementById('phoneError');
-            const phoneRegex = /^\d{10}$/;
-            if (phone === '') {
-                phoneError.textContent = 'Phone number is required.';
-                isValid = false;
-            } else if (!phoneRegex.test(phone)) {
-                phoneError.textContent = 'Please enter a valid 10-digit phone number.';
-                isValid = false;
-            } else {
-                phoneError.textContent = '';
-            }
-
-            if (isValid) {
-                window.location.href = 'home.html';
-            }
-        }
-    </script>
+  <footer class="site-shell">
+    <div class="footer-card reveal">
+      <div>
+        <h2>Ready to collaborate on something useful?</h2>
+        <p class="footer-meta">I am open to internships, entry-level roles, and frontend projects where I can keep growing.</p>
+      </div>
+      <div class="footer-card__actions">
+        <a class="btn btn--accent" href="mailto:Pushkarchoudhary362@gmail.com?subject=Portfolio%20Inquiry">Email me</a>
+        <a class="btn btn--ghost" href="https://github.com/Pushkar1306" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+    <p class="site-footer-note">Copyright <span data-current-year></span> Pushkar Choudhary. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
 </body>
 </html>

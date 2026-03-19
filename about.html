@@ -1,94 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Pushkar Choudhary — Frontend Developer. Computer Engineering graduate 2026. React, JavaScript, Node.js. Open to internships and entry-level roles.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Pushkar Choudhary — Frontend Developer">
-  <meta property="og:description" content="Portfolio of Pushkar Choudhary, web developer skilled in React, JavaScript, Node.js and responsive design.">
-  <meta property="og:url" content="https://pushkar1306.github.io/Portfolio/">
-  <meta name="twitter:card" content="summary">
-  <title>About — Pushkar Choudhary</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Learn more about Pushkar Choudhary, a final-year Computer Engineering student focused on frontend development, accessibility, and responsive UI."
+  >
+  <title>About | Pushkar Choudhary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="portfolio.css">
+  <script defer src="portfolio.js"></script>
 </head>
 <body class="portfolio">
-  <header>
-    <h1>Pushkar Choudhary - Web Developer</h1>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-    <nav>
-      <ul>
-        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
-        <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
-        <li><a href="skills.html"><i class="fas fa-code"></i> Skills</a></li>
-        <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
-        <li><a href="education.html"><i class="fas fa-university"></i> Education</a></li>
-        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-        <li><a href="assets/Pushkar_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="site-shell site-header__bar">
+      <a class="brand" href="index.html">
+        <span class="brand__name">Pushkar Choudhary</span>
+        <span class="brand__role">Frontend Developer Portfolio</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul>
+          <li><a data-nav-link href="index.html"><span>Home</span><i class="fas fa-house"></i></a></li>
+          <li><a data-nav-link href="about.html"><span>About</span><i class="fas fa-user"></i></a></li>
+          <li><a data-nav-link href="skills.html"><span>Skills</span><i class="fas fa-code"></i></a></li>
+          <li><a data-nav-link href="projects.html"><span>Projects</span><i class="fas fa-layer-group"></i></a></li>
+          <li><a data-nav-link href="education.html"><span>Education</span><i class="fas fa-graduation-cap"></i></a></li>
+          <li><a data-nav-link href="contact.html"><span>Contact</span><i class="fas fa-envelope"></i></a></li>
+          <li><a href="mailto:Pushkarchoudhary362@gmail.com?subject=Resume%20Request"><span>Resume</span><i class="fas fa-file-arrow-down"></i></a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section id="about">
-      <h2><i class="fas fa-info-circle"></i> About Me</h2>
-      <p>Hello — I'm <strong>Pushkar Choudhary</strong>, a Computer Engineering graduate (2026) with a passion for building web experiences that are fast, accessible, and delightful. I combine strong fundamentals in algorithms and systems with modern front-end practices.</p>
 
-      <h3>Summary</h3>
-      <p>As a fresher and self-driven learner I focus on front-end engineering (React, CSS, accessibility), but I also build full-stack prototypes using Node.js and lightweight databases. I enjoy turning design ideas into interactive sites and learning about performance and developer tools.</p>
+  <main class="page-main site-shell">
+    <section class="page-hero reveal">
+      <span class="eyebrow"><i class="fas fa-user"></i> About me</span>
+      <h1>I am building my frontend career through real projects and steady practice.</h1>
+      <p>
+        I am a final-year Computer Engineering student who enjoys the part of software that people actually touch:
+        layouts, interfaces, content flow, and the small details that make a product feel easier to use.
+      </p>
+    </section>
 
-      <h3>Experience & Internships</h3>
-      <ul>
-        <li><strong>Frontend Intern — Small Startup (Remote)</strong> (Jun 2025 — Aug 2025) — Improved UI responsiveness, added component tests, and helped migrate styles to a token-based system.</li>
-        <li><strong>Teaching Assistant — Web Development Course</strong> (Jan 2025 — Apr 2025) — Mentored students on HTML/CSS/JS, graded assignments, and held weekly help sessions.</li>
-      </ul>
+    <section class="cards-grid reveal">
+      <article class="section-card">
+        <span class="section-kicker">Background</span>
+        <h2 class="section-title">A technical foundation with a strong UI interest</h2>
+        <p class="section-copy">
+          My degree gives me the engineering side of problem solving, while my projects pull me toward frontend work.
+          I like building websites that are clean, readable, and responsive across devices.
+        </p>
+      </article>
+      <article class="section-card">
+        <span class="section-kicker">What matters to me</span>
+        <h2 class="section-title">Clarity, consistency, and usability</h2>
+        <p class="section-copy">
+          Good frontend work is not only about color or animation. It is also about readable structure, predictable
+          spacing, accessible interactions, and helping people understand what to do next.
+        </p>
+      </article>
+    </section>
 
-      <h3>Notable Strengths</h3>
-      <ul>
-        <li>Clean HTML semantics and accessibility-first markup.</li>
-        <li>Responsive layouts with CSS Grid/Flexbox and mobile-first design.</li>
-        <li>Familiarity with React component patterns and state management.</li>
-        <li>Quick prototyping and debugging with browser devtools.</li>
-      </ul>
+    <section class="timeline reveal">
+      <article class="timeline-card">
+        <div class="timeline-card__top">
+          <div>
+            <span class="section-kicker">Now</span>
+            <h3>Sharpening frontend fundamentals</h3>
+          </div>
+          <span class="timeline-card__badge">Current focus</span>
+        </div>
+        <p>
+          I am spending time on HTML semantics, CSS layout systems, JavaScript fundamentals, and React basics so I can
+          build interfaces that feel solid before adding complexity.
+        </p>
+      </article>
+      <article class="timeline-card">
+        <div class="timeline-card__top">
+          <div>
+            <span class="section-kicker">Mindset</span>
+            <h3>Learning by making and refining</h3>
+          </div>
+          <span class="timeline-card__badge">Process</span>
+        </div>
+        <p>
+          I learn best by building something, reviewing what feels weak, and improving it again. That cycle is how I
+          grow my judgment around spacing, responsiveness, and cleaner code structure.
+        </p>
+      </article>
+      <article class="timeline-card">
+        <div class="timeline-card__top">
+          <div>
+            <span class="section-kicker">Next step</span>
+            <h3>Contributing on real teams</h3>
+          </div>
+          <span class="timeline-card__badge">Opportunity</span>
+        </div>
+        <p>
+          I am looking for internships and entry-level roles where I can contribute to production work, learn stronger
+          engineering habits, and become a reliable frontend teammate.
+        </p>
+      </article>
+    </section>
 
-      <h3>Hobbies & Interests</h3>
-      <p>Open-source, sketching UI ideas, photography, and learning new JS tooling.</p>
-
-      <h3>Availability</h3>
-      <p>Open to internships and entry-level roles. Willing to relocate or work remotely.</p>
+    <section class="cards-grid reveal">
+      <article class="list-card">
+        <span class="kicker">Strengths</span>
+        <h3>What I already bring</h3>
+        <ul class="bullet-list">
+          <li>Comfortable with responsive layout work using Flexbox and Grid.</li>
+          <li>Curious about interface polish, readability, and visual hierarchy.</li>
+          <li>Motivated to learn quickly and improve through feedback.</li>
+        </ul>
+      </article>
+      <article class="list-card">
+        <span class="kicker">Outside code</span>
+        <h3>What keeps my work grounded</h3>
+        <ul class="bullet-list">
+          <li>I enjoy learning through iteration rather than waiting for perfect first drafts.</li>
+          <li>I like exploring design references to understand why some pages feel better than others.</li>
+          <li>I value practical communication and clear teamwork as much as the code itself.</li>
+        </ul>
+      </article>
     </section>
   </main>
-  <footer>
-    <p>
-      <a href="mailto:Pushkarchoudhary362@gmail.com" title="Email" style="color:inherit;margin:0 8px;">
-        <i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/Pushkar1306" title="GitHub" target="_blank" style="color:inherit;margin:0 8px;"><i class="fab fa-github"></i></a>
-      <a href="tel:+917588847171" title="Phone" style="color:inherit;margin:0 8px;">
-        <i class="fas fa-phone"></i></a>
-    </p>
-    <p style="font-size:0.8rem;opacity:0.5;margin-top:6px;">
-      &copy; 2026 Pushkar Choudhary · Open to opportunities
-    </p>
-  </footer>
-  <script>
-    // Nav toggle for mobile
-    (function () {
-      const btn = document.querySelector('.nav-toggle');
-      const header = document.querySelector('header');
-      if (btn) {
-        btn.addEventListener('click', () => {
-          header.classList.toggle('nav-open');
-        });
-      }
-    })();
 
-    // Highlight current page in nav
-    (function () {
-      const page = location.pathname.split('/').pop() || 'home.html';
-      document.querySelectorAll('nav a').forEach(a => {
-        if (a.getAttribute('href') === page) a.classList.add('nav-link--active');
-      });
-    })();
-  </script>
+  <footer class="site-shell">
+    <div class="footer-card reveal">
+      <div>
+        <h2>Want to know more about my work style?</h2>
+        <p class="footer-meta">The best next stop is my project page, where the technical direction becomes more concrete.</p>
+      </div>
+      <div class="footer-card__actions">
+        <a class="btn btn--accent" href="projects.html">See projects</a>
+        <a class="btn btn--ghost" href="contact.html">Start a conversation</a>
+      </div>
+    </div>
+    <p class="site-footer-note">Copyright <span data-current-year></span> Pushkar Choudhary. Built with HTML, CSS, and JavaScript.</p>
+  </footer>
 </body>
 </html>

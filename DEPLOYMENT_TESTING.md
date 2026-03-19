@@ -24,7 +24,7 @@ Your repo is already pushed to GitHub. Now enable GitHub Pages:
 
 1. Under "Build and deployment"
 2. Source: Select **Deploy from a branch**
-3. Branch: Select **main** 
+3. Branch: Select **main**
 4. Folder: Select **/(root)**
 5. Click **Save**
 
@@ -45,12 +45,14 @@ Visit: **https://pushkar1306.github.io/Portfolio/**
 ## 🧪 Testing Checklist
 
 ### Before EmailJS Setup
+
 - [ ] Home page loads with avatar "PC" placeholder
 - [ ] Navigation menu visible and clickable
 - [ ] All page links work (Home, About, Skills, Projects, Education, Contact)
 - [ ] Resume link (will 404 until you add PDF)
 
 ### Responsive Design Testing
+
 1. Open portfolio on your phone OR
 2. In browser, press **F12** (DevTools) → Click device icon → Select "iPhone 12"
 3. Test:
@@ -61,18 +63,21 @@ Visit: **https://pushkar1306.github.io/Portfolio/**
    - [ ] Images responsive (avatar, project cards)
 
 ### Skills Page Animation Testing
+
 1. Go to Skills page
 2. [ ] Watch skill bars animate from 0% → full width
 3. [ ] Bars stagger in sequence (not all at once)
 4. Expected: "HTML & CSS" starts first, "Tools" finishes last
 
 ### Project Badges Testing
+
 1. Go to Projects page
 2. [ ] See tech badges (JavaScript, CSS, React, etc.)
 3. [ ] Badges are pill-shaped with teal color
 4. [ ] Live Demo & GitHub links both present
 
 ### Contact Form Testing
+
 1. Go to Contact page
 2. Fill out form:
    - Name: "Test User"
@@ -129,22 +134,27 @@ python -m http.server 8000
 ## 🐛 Troubleshooting
 
 **Contact form shows "Failed"?**
+
 - Make sure EmailJS credentials are filled in `contact.html`
 - Check browser console (F12) for error messages
 
 **Hamburger menu doesn't appear on mobile?**
+
 - Check DevTools is set to mobile view (<768px)
 - Refresh page (Ctrl+Shift+R for hard refresh)
 
 **Skills bars not animating?**
+
 - Check portfolio.css was updated (search for `skillBarGrow`)
 - Refresh page with Ctrl+Shift+R
 
 **Resume link shows 404?**
+
 - File is missing from `assets/` folder
 - Filename must be exactly: `Pushkar_Resume.pdf` (case-sensitive)
 
 **Navigation highlights wrong page?**
+
 - This works based on filename matching `home.html`, `about.html`, etc.
 - Make sure you're using exact filenames
 
@@ -153,6 +163,7 @@ python -m http.server 8000
 ## 📊 Site Performance Metrics
 
 After deploy, check performance at:
+
 - [PageSpeed Insights](https://pagespeed.web.dev/) → Paste your GitHub Pages URL
 - Test on mobile & desktop
 - Look for optimization suggestions
