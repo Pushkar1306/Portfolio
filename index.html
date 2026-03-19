@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <meta name="description" content="Pushkar Choudhary — Frontend Developer. Computer Engineering graduate 2026. React, JavaScript, Node.js. Open to internships and entry-level roles.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pushkar Choudhary — Frontend Developer">
+    <meta property="og:description" content="Portfolio of Pushkar Choudhary, web developer skilled in React, JavaScript, Node.js and responsive design.">
+    <meta property="og:url" content="https://pushkar1306.github.io/Portfolio/">
+    <meta name="twitter:card" content="summary">
+    <title>Registration — Pushkar Choudhary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
 body {
     font-family: Arial, sans-serif;
@@ -12,9 +19,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     position: relative;
+    padding: 20px;
 }
 
 body::before {
@@ -37,17 +45,19 @@ body::before {
 
 .container {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    width: 350px;
     position: relative;
     z-index: 1;
 }
 
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #0d1b2a;
+    font-size: 1.8em;
 }
 
 .form-group {
@@ -57,44 +67,85 @@ h2 {
 label {
     display: block;
     margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
 }
 
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #61dafb;
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.3);
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
+    padding: 12px;
+    background: linear-gradient(90deg, #61dafb, #7bdff6);
+    color: #0d1b2a;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(97, 218, 251, 0.3);
 }
 
 .error {
-    color: red;
+    color: #e74c3c;
     font-size: 12px;
+    margin-top: 4px;
+    display: none;
+}
+
+.success {
+    color: #27ae60;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background: rgba(39, 174, 96, 0.1);
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.form-footer a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive styles */
 @media (max-width: 600px) {
     .container {
         width: 90%;
-        padding: 15px;
+        padding: 20px;
     }
 
     h2 {
         font-size: 1.5em;
+        margin-bottom: 20px;
     }
 
     input {
@@ -108,8 +159,8 @@ button:hover {
 
 @media (max-width: 400px) {
     .container {
-        width: 95%;
-        padding: 10px;
+        width: 100%;
+        padding: 15px;
     }
 
     h2 {
@@ -120,25 +171,29 @@ button:hover {
 </head>
 <body>
     <div class="container">
-        <h2>User Registration</h2>
+        <h2><i class="fas fa-user-plus"></i> Register</h2>
+        <div class="success" id="successMessage">Registration successful! Redirecting...</div>
         <form id="registrationForm">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <span class="error" id="nameError"></span>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Pushkar Choudhary" required>
+                <span class="error" id="nameError">Please enter a valid name</span>
             </div>
             <div class="form-group">
-                <label for="email">Email ID:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error" id="emailError"></span>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                <span class="error" id="emailError">Please enter a valid email</span>
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <span class="error" id="phoneError"></span>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 7588847171" required>
+                <span class="error" id="phoneError">Please enter a valid phone number</span>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Create Account</button>
         </form>
+        <div class="form-footer">
+            Already have an account? <a href="home.html">Go to Portfolio</a>
+        </div>
     </div>
     <script>
         document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -147,7 +202,51 @@ button:hover {
         });
 
         function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            
             let isValid = true;
+            
+            // Reset error messages
+            document.getElementById('nameError').style.display = 'none';
+            document.getElementById('emailError').style.display = 'none';
+            document.getElementById('phoneError').style.display = 'none';
+
+            // Validate name
+            if (name.length < 3) {
+                document.getElementById('nameError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'block';
+                isValid = false;
+            }
+
+            // Validate phone
+            const phonePattern = /^\+?[\d\s\-()]{7,}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById('phoneError').style.display = 'block';
+                isValid = false;
+            }
+
+            if (isValid) {
+                const successMsg = document.getElementById('successMessage');
+                successMsg.style.display = 'block';
+                document.getElementById('registrationForm').style.display = 'none';
+                
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'home.html';
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>
 
             // Name validation
             const name = document.getElementById('name').value.trim();

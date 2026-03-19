@@ -3,18 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Pushkar Choudhary — Frontend Developer. Computer Engineering graduate 2026. React, JavaScript, Node.js. Open to internships and entry-level roles.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pushkar Choudhary — Frontend Developer">
+  <meta property="og:description" content="Portfolio of Pushkar Choudhary, web developer skilled in React, JavaScript, Node.js and responsive design.">
+  <meta property="og:url" content="https://pushkar1306.github.io/Portfolio/">
+  <meta name="twitter:card" content="summary">
   <title>Contact — Pushkar Choudhary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="portfolio.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    emailjs.init("YOUR_PUBLIC_KEY");
+  </script>
   <style>
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
     .contact-card { padding:16px; background: rgba(255,255,255,0.03); border-radius:10px; }
     form input, form textarea { width:100%; padding:8px; margin-top:8px; border-radius:6px; border:1px solid rgba(255,255,255,0.08); background:transparent; color:white }
-    form button { margin-top:8px; padding:8px 12px; border-radius:6px; border:none; background:#61dafb; color:#052a3a; font-weight:bold }
+    form button { margin-top:8px; padding:8px 12px; border-radius:6px; border:none; background:#61dafb; color:#052a3a; font-weight:bold; cursor:pointer; }
+    form button:disabled { opacity:0.6; cursor:not-allowed; }
   </style>
 </head>
 <body class="portfolio">
   <header>
     <h1>Pushkar Choudhary - Web Developer</h1>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
     <nav>
       <ul>
         <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
@@ -23,6 +36,7 @@
         <li><a href="projects.html"><i class="fas fa-folder-open"></i> Projects</a></li>
         <li><a href="education.html"><i class="fas fa-university"></i> Education</a></li>
         <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="assets/Pushkar_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Resume</a></li>
       </ul>
     </nav>
   </header>
@@ -39,11 +53,11 @@
         </div>
         <div class="contact-card">
           <h3>Send a message</h3>
-          <form action="#" method="post" onsubmit="alert('This is a demo form — implement backend or email handler to actually send messages.'); return false;">
+          <form>
             <label>Name</label>
-            <input type="text" name="name" placeholder="Your name" required>
+            <input type="text" name="user_name" placeholder="Your name" required>
             <label>Email</label>
-            <input type="email" name="email" placeholder="you@example.com" required>
+            <input type="email" name="user_email" placeholder="you@example.com" required>
             <label>Message</label>
             <textarea name="message" rows="5" placeholder="Say hello..." required></textarea>
             <button type="submit">Send</button>
@@ -53,8 +67,58 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2026 Pushkar Choudhary. All rights reserved.</p>
+    <p>
+      <a href="mailto:Pushkarchoudhary362@gmail.com" title="Email" style="color:inherit;margin:0 8px;">
+        <i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Pushkar1306" title="GitHub" target="_blank" style="color:inherit;margin:0 8px;"><i class="fab fa-github"></i></a>
+      <a href="tel:+917588847171" title="Phone" style="color:inherit;margin:0 8px;">
+        <i class="fas fa-phone"></i></a>
+    </p>
+    <p style="font-size:0.8rem;opacity:0.5;margin-top:6px;">
+      &copy; 2026 Pushkar Choudhary · Open to opportunities
+    </p>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+  <script>
+    // Replace YOUR_PUBLIC_KEY, YOUR_SERVICE_ID, YOUR_TEMPLATE_ID with values from emailjs.com
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => {
+          btn.textContent = 'Sent ✓';
+          this.reset();
+          setTimeout(() => {
+            btn.textContent = 'Send';
+            btn.disabled = false;
+          }, 3000);
+        })
+        .catch(() => {
+          btn.textContent = 'Failed — try again';
+          btn.disabled = false;
+        });
+    });
+
+    // Nav toggle for mobile
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const header = document.querySelector('header');
+      if (btn) {
+        btn.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+        });
+      }
+    })();
+
+    // Highlight current page in nav
+    (function () {
+      const page = location.pathname.split('/').pop() || 'home.html';
+      document.querySelectorAll('nav a').forEach(a => {
+        if (a.getAttribute('href') === page) a.classList.add('nav-link--active');
+      });
+    })();
+  </script>
 </body>
 </html>
