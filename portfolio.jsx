@@ -53,8 +53,8 @@ function Portfolio() {
             <p>An e-commerce platform for plant shopping built with JavaScript.</p>
           </div>
           <div className="project">
-            <h3><a href="https://github.com/Pushkar1306/Localrepo">Localrepo</a></h3>
-            <p>A local repository project using CSS.</p>
+            <h3><a href="https://github.com/Pushkar1306/Clinic-Website">Clinic Website</a></h3>
+            <p>A healthcare management system with appointment booking and patient service information.</p>
           </div>
           <div className="project">
             <h3><a href="https://github.com/Pushkar1306/Portfolio">Portfolio</a></h3>
