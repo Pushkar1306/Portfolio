@@ -169,6 +169,10 @@ img {
   padding: 1.25rem 0 4rem;
 }
 
+.page-main > * + * {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
 .hero,
 .page-hero,
 .section-card,
@@ -598,7 +602,6 @@ img {
 .page-hero {
   display: grid;
   gap: 1rem;
-  margin-bottom: 1.2rem;
 }
 
 .timeline {
